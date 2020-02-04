@@ -122,15 +122,15 @@ products = [{ name: 'brass bell', description: 'this has some description', cost
 # functions or methods
 
 def cheap_discounts
-  puts 'kanjus makkhi chus dont come again'
+ # puts 'kanjus makkhi chus dont come again'
 end
 
 def mcc
-  puts 'please give some good money when coming next time'
+  #puts 'please give some good money when coming next time'
 end
 
 def return_gifts
-  puts 'we are very pleased to shop with you, this urli is a gift from our side'
+  #puts 'we are very pleased to shop with you, this urli is a gift from our side'
 end
 
 # condtion
@@ -144,3 +144,14 @@ products.each do |product|
   end
 end
 
+# method with arguments
+def primary_initializer(*foo)
+  puts "hi i am #{foo[0]} i work as a #{foo[1]} and i reside at #{foo[2]}"
+end
+
+def secondary_initializer(foo)
+  puts "hi i am #{foo[:name]} i work as a #{foo[:occupation]} and i reside at #{foo[:location]}"
+end
+
+primary_initializer('nayla', 'dm', 'hyderabad')
+secondary_initializer({name: 'nayla', occupation: 'dm', location: 'hyderabad'})
