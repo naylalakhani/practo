@@ -11,12 +11,17 @@ class Car
   def stop
     puts 'car is now off, you can lock and walk'
   end
+
+  private
+
+  def set_temp
+    puts 'are you a driver'
+  end
 end
 
 car = Car.new('breeza', 1500, 140)
 car.start
 puts 'car started'
-sleep(5)
-puts 'you are now stopping it'
 sleep(2)
-car.stop
+car.set_temp
+
