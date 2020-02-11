@@ -44,13 +44,19 @@ end
 puts 'welcome to our calculator'
 puts 'Please enter first number'
 num1 = gets.chomp
-puts 'please enter second number'
+num1.to_i.is_a? Integer ? "please enter second number" : "zeros and other values cant be processed"
 num2 = gets.chomp
+if num2. to_i.is_a? Integer
 puts '1.Addition'
 puts '2.Subtraction'
 puts '3.Multiplication'
 puts '4.Division'
 puts '5.Percentage'
 puts 'enter a number for which operation to be performed on the entered numbers'
+else 
+    puts 'zeros and other values cant be processed'
 ops = gets.chomp
+end
 calculate = Calsi.new(num1,num2,ops)
+#Used ternary operator
+# your script should catch and stop the execution of the program if the inputs are non integers
